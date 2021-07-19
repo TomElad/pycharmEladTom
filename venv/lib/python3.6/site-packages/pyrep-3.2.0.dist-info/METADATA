@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyrep
+Version: 3.2.0
+Summary: This package provides a pythonic way to organize dumping and pulling python objects and other type of files to a folder or a directory that is called repository.
+Home-page: http://bachiraoun.github.io/pyrep/
+Author: Bachir AOUN
+Author-email: bachir.aoun@e-aoun.com
+License: GNU
+Download-URL: https://github.com/bachiraoun/pyrep
+Platform: Windows
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Dist: pylocker (>=2.1.0)
+
+This package provides a pythonic way to organize dumping and pulling python objects and other type of files to a folder or a directory that is called repository.
+A Repository can be created in any directory or folder, it suffices to initialize a Repository instance in a directory to start dumping and pulling object into it. .
+Any directory or a folder that contains a .pyrepinfo binary file in it, is theoretically a pyrep Repository.By default dump and pull methods use pickle to serialize storing python objects.
+Practically any other methods can be used simply by providing the means and the required libraries in a simple form of string.
+
