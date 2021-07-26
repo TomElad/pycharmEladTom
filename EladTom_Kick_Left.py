@@ -21,7 +21,7 @@ def run():
     pr.start()
     ballHandle = sim.simGetObjectHandle('Sphere')
     pi = math.pi
-    agent = UR5()   
+    agent = UR5()
 
     def move_arm(position, quaternion, ignore_collisions=False):
         arm_path = agent.get_linear_path(position,
