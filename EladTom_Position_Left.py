@@ -13,11 +13,11 @@ import random
 from multiprocessing import Process
 import time
 
-# code v2 - positions: jkl kick: asd
+# code v1 - positions: asd kick: jkl
 
 def run():
     pr = PyRep()
-    pr.launch('/home/user/Documents/TomAndElad/All_Parts_kick_left.ttt', headless=False)
+    pr.launch('/home/user/Documents/TomAndElad/All_Parts_position_left.ttt', headless=False)
     pr.start()
     ballHandle = sim.simGetObjectHandle('Sphere')
     pi = math.pi
@@ -91,7 +91,7 @@ def run():
 
     exit1 = 0
     randomposition()
-    position = 'k'
+    position = 's'
 
     with keyboard.Events() as events:
 
@@ -121,71 +121,71 @@ def run():
             if event.key == keyboard.KeyCode.from_char('n'):
                 randomposition()
                 continue
-            if event.key == keyboard.KeyCode.from_char('j'):
-                position = 'j'
-            if event.key == keyboard.KeyCode.from_char('k'):
-                position = 'k'
-            if event.key == keyboard.KeyCode.from_char('l'):
-                position = 'l'
             if event.key == keyboard.KeyCode.from_char('a'):
-                kickk = 'a'
+                position = 'a'
             if event.key == keyboard.KeyCode.from_char('s'):
-                kickk = 's'
+                position = 's'
             if event.key == keyboard.KeyCode.from_char('d'):
-                kickk = 'd'
+                position = 'd'
+            if event.key == keyboard.KeyCode.from_char('j'):
+                kickk = 'j'
+            if event.key == keyboard.KeyCode.from_char('k'):
+                kickk = 'k'
+            if event.key == keyboard.KeyCode.from_char('l'):
+                kickk = 'l'
 
-            if position == 'j':
+            if position == 'a':
                 set_position(left)
-                if kickk == 'a':
+                if kickk == 'j':
                     kick(left_left)
-                    position = 'k'
+                    position = 's'
                     kickk = 0
                     continue
-                if kickk == 's':
+                if kickk == 'k':
                     kick(left_center)
-                    position = 'k'
+                    position = 's'
                     kickk = 0
                     continue
-                if kickk == 'd':
+                if kickk == 'l':
                     kick(left_right)
-                    position = 'k'
+                    position = 's'
                     kickk = 0
                     continue
 
                 continue
 
-            if position == 'k':
+            if position == 's':
                 set_position(center)
-                if kickk == 'a':
+                if kickk == 'j':
                     kick(center_left)
                     kickk = 0
                     continue
-                if kickk == 's':
+                if kickk == 'k':
                     kick(center_center)
                     kickk = 0
                     continue
-                if kickk == 'd':
+                if kickk == 'l':
                     kick(center_right)
                     kickk = 0
                     continue
 
                 continue
 
-            if position == 'l':
+            if position == 'd':
                 set_position(right)
-                if kickk == 'a':
+                if kickk == 'j':
                     kick(right_left)
-                    position = 'k'
+                    position = 's'
                     kickk = 0
                     continue
-                if kickk == 's':
+                if kickk == 'k':
                     kick(right_center)
-                    position = 'k'
+                    position = 's'
                     kickk = 0
                     continue
-                if kickk == 'd':
+                if kickk == 'l':
                     kick(right_right)
-                    position = 'k'
+                    position = 's'
                     kickk = 0
                     continue
 
